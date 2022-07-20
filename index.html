@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <title>Training company"</title>
+    <link rel="icon" href="disney.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta name="description" lang="uk" content="Training company">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="contact">
+            <li class="img-contact"><img src="./images/icons8-phone-24.png"> Call Us: 1-587-639-478</li>
+            <p>|</p>
+            <li class="img-contact-second"><img src="./images/icons8-mail-24.png"> Mail: examples@company.com</li>
+            <li class="img-contact-icon"><img src="./images/icons8-facebook-f-24.png"></li>
+            <li class="img-contact-icon"><img src="./images/icons8-twitter-30.png"></li>
+            <li class="img-contact-icon"><img src="./images/icons8-instagram-50.png"></li>
+            <li class="img-contact-icon"><img src="./images/icons8-google-plus-30.png"></li>
+            <p>|</p>
+            <li class="img-contact"><img src="./images/icons8-support-30.png"> Support</li>
+            <button class="contact-with-us">contact with us</button>
+        </div>
+
+        <nav>
+            <div class="logo">
+                <a href="#"><img id="img-logo" src="./images/consulting.png"></a>
+            </div>
+
+            <ul class="menu">
+                <li class="menu_item"><a href="#">Home</a></li>
+                <li class="menu_item"><a href="#">About Us</a></li>
+                <li class="menu_item"><a href="#">Page</a></li>
+                <li class="menu_item"><a href="#">Single Page</a></li>
+                <li class="menu_item"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section-our-company">
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img class="img-slideshow" src="./images/our-company.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img class="img-slideshow" src="./images/our-company2.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <!-- <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div> -->
+        </div>
+        <div class="centered">
+            <h1>Training company make your dream </h1>
+            <h3>we serve avery size and type company from startups to fortune 20</h3>
+            <button class="btn-our-company">Our company</button>
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    <section class="section-about">
+        <img id="men" src="./images/men.png">
+        <h2>we are <span class="bluetext">consulting</span> company help you in start</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum nesciunt sed voluptate quaerat sunt quibusdam, sapiente porro quae quia praesentium facere, unde error quos tenetur. Necessitatibus fuga suscipit odio cum!</p>
+        <button class="btn-our-company">Our company</button>
+    </section>
+
+    <section class="section-consulting-services">
+        <h3 class="center">Our consulting services</h3>
+        <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, similique ipsum! Doloribus maxime blanditiis officiis ab praesentium aspernatur libero doloremque deserunt iure. Quibusdam explicabo dignissimos, aliquam dolor ratione repellendus
+            et.
+        </p>
+        <div class="card__container">
+            <div class="card">
+                <div class="card__content">
+                    <img src="./images/icons8-hierarchy-50.png">
+                    <h3 class="card__header">Business planning? strategy & execution </h3>
+                    <p class="card__info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere ducimus provident, blanditiis laboriosam eius facilis</p>
+                    <button class="card__button">Read more</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__content">
+                    <img src="./images/icons8-increase-50.png">
+                    <h3 class="card__header">Financy projections and analysis</h3>
+                    <p class="card__info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere ducimus provident, blanditiis laboriosam eius facilis</p>
+                    <button class="card__button">Read more</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__content">
+                    <img src="./images/icons8-idea-bank-50.png">
+                    <h3 class="card__header">International business opportunitis</h3>
+                    <p class="card__info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere ducimus provident, blanditiis laboriosam eius facilis.</p>
+                    <button class="card__button">Read more</button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section-our-practice-area">
+        <h3 class="center">Our practice areas</h3>
+        <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, similique ipsum! Doloribus maxime blanditiis officiis ab praesentium aspernatur libero doloremque deserunt iure. Quibusdam explicabo dignissimos, aliquam dolor ratione repellendus
+            et.
+        </p>
+        <div class="card__container2">
+            <div class="card2">
+                <div class="card__content2">
+                    <img class="image-card" src="./images/card1.jpg">
+                    <h3 class="card__header">Financy projections and analysis</h3>
+                    <p class="card__info">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="card__content2">
+                    <img class="image-card" src="./images/card2.jpg">
+                    <h3 class="card__header">Financy projections and analysis</h3>
+                    <p class="card__info">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="card__content2">
+                    <img class="image-card" src="./images/card3.jpg">
+                    <h3 class="card__header">Financy projections and analysis</h3>
+                    <p class="card__info">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="card__content2">
+                    <img class="image-card" src="./images/card4.jpg">
+                    <h3 class="card__header">Financy projections and analysis</h3>
+                    <p class="card__info">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-why-choose-us">
+        <h3 class="center" style="color: #fff;">who choose us</h3>
+        <p class="center" style="color: #fff;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, similique ipsum! Doloribus maxime blanditiis officiis ab praesentium aspernatur libero doloremque deserunt iure. Quibusdam explicabo dignissimos, aliquam dolor ratione repellendus
+            et.
+        </p>
+        <div class="statistic-blocks">
+            <div class="statistic-block">
+                <p class="number">2300</p>
+                <p>invesment planning</p>
+            </div>
+            <div class="statistic-block">
+                <p class="number">3250</p>
+                <p>commodities trading</p>
+            </div>
+            <div class="statistic-block">
+                <p class="number">4571</p>
+                <p>wealth management</p>
+            </div>
+            <div class="statistic-block">
+                <p class="number">5475</p>
+                <p>happy clients</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-our-portfolio">
+        <h3 class="center">our portfolio</h3>
+        <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, similique ipsum! Doloribus maxime blanditiis officiis ab praesentium aspernatur libero doloremque deserunt iure.</p>
+
+        <div class="portfolio-gallery">
+            <div class="portfolio-title">
+                <p>all works</p>
+                <p>Financial</p>
+                <p>marketing</p>
+                <p>logistics</p>
+            </div>
+            <div class="portfolio-image">
+                <img src="./images/portfolio1.jpg">
+                <img src="./images/portfolio2.png">
+                <img src="./images/portfolio3.jpg">
+                <img src="./images/portfolio4.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-our-portfolio2">
+        <h3 class="center">our portfolio</h3>
+        <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, similique ipsum! Doloribus maxime blanditiis officiis ab praesentium aspernatur libero doloremque deserunt iure.</p>
+        <div class="card__container2">
+            <div class="card2">
+                <div class="card__content2">
+                    <img class="image-card3" src="./images/portfolio5.jpg">
+                    <h4 class="card__header">Nilla Doe</h4>
+                    <h3 style="text-transform: uppercase;">Finance support</h3>
+                    <p class="card__info">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p>+380 73 34 56 133</p>
+                </div>
+                <div class="card__content2">
+                    <img class="image-card3" src="./images/portfolio6.png">
+                    <h4 class="card__header">Joe Smith</h4>
+                    <h3 style="text-transform: uppercase;">Finance support</h3>
+                    <p class="card__info">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p>+380 73 34 56 134</p>
+                </div>
+                <div class="card__content2">
+                    <img class="image-card3" src="./images/portfolio7.png">
+                    <h4 class="card__header">Michael Doe</h4>
+                    <h3 style="text-transform: uppercase;">Owner Consulting</h3>
+                    <p class="card__info">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p>+380 73 34 56 135</p>
+                </div>
+                <div class="card__content2">
+                    <img class="image-card3" src="./images/portfolio8.png">
+                    <h4 class="card__header">Tisa Doe</h4>
+                    <h3 style="text-transform: uppercase;">Finance support</h3>
+                    <p class="card__info">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p>+380 73 34 56 136</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimoniasl">
+        <h3 class="center">testimoniasl</h3>
+        <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, similique ipsum! Doloribus maxime blanditiis officiis ab praesentium aspernatur libero doloremque deserunt iure.</p>
+
+        <div class="desription">
+            <div class="profile">
+                <img id="profile1" src="./images/portfolio9.png">
+                <p class="name">John Doe Seo</p>
+                <img id="stars" src="./images/clipart3292343.png"></div>
+            <p class="descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex recusandae, obcaecati dolorem reprehenderit quas repellendus. Porro quisquam, sed ipsa voluptatibus architecto perferendis voluptatem harum illo non aliquam totam laboriosam saepe.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laudantium quia accusantium aspernatur ullam ipsa, veniam fuga omnis facilis fugit quo officiis dolorum porro vel rerum temporibus blanditiis. Nisi, minima? Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit. Sunt amet alias delectus natus at placeat, numquam dolores similique dolorem laboriosam et sint possimus error fugit hic minus voluptas. Libero facere nesciunt ea animi dignissimos vel hic
+                esse? Delectus, aliquid voluptatibus.</p>
+        </div>
+    </section>
+</body>
+
+<footer>
+    <div class="footer">
+        <div class="footer-col1">
+            <a href="#"><img id="img-logo-footer" src="./images/logo-principale.png"></a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore animi quod culpa aspernatur eos! Porro hic commodi explicabo iure numquam? Inventore reiciendis aperiam deleniti perferendis saepe consequuntur incidunt quae earum?</p>
+            <br>
+            <p>15k followers</p>
+            <hr>
+            <div class="follow-us">
+                Follow Us:
+                <li class="img-contact-icon"><img class="footer-icon" src="./images/icons8-facebook-f-24.png"></li>
+                <li class="img-contact-icon"><img class="footer-icon" src="./images/icons8-twitter-30.png"></li>
+                <li class="img-contact-icon"><img class="footer-icon" src="./images/icons8-instagram-50.png"></li>
+                <li class="img-contact-icon"><img class="footer-icon" src="./images/icons8-google-plus-30.png"></li>
+
+            </div>
+            <form class="subscription">
+                <input class="add-email" type="email" placeholder="Your Email...">
+                <button class="submit-email" type="button">
+                  <span class="before-submit">Subscribe</span>
+                 </button>
+            </form>
+        </div>
+
+        <div class="footer-col2">
+            <h5>Blogs</h5>
+            <div class="blogs-item">
+                <img src="./images/blog-item1.jpg">
+                <div class="blogs-item-info">
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit</h5>
+                    <h5 style="text-transform:capitalize;"><span class="bluetext">Jan 9, 2016</span></h5>
+                </div>
+            </div>
+            <div class="blogs-item">
+                <img src="./images/blog-item2.jpg">
+                <div class="blogs-item-info">
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit</h5>
+                    <h5 style="text-transform:capitalize;"><span class="bluetext">Jan 9, 2016</span></h5>
+                </div>
+            </div>
+            <div class="blogs-item">
+                <img src="./images/blog-item3.jpg">
+                <div class="blogs-item-info">
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit</h5>
+                    <h5 style="text-transform:capitalize;"><span class="bluetext">Jan 9, 2016</span></h5>
+                </div>
+            </div>
+        </div>
+        <div class="footer-col3">
+            <h5>Instagram</h5>
+            <div class="instagram-items">
+                <img class="instagram-item" src="./images/item1.jpg">
+                <img class="instagram-item" src="./images/item2.jpg">
+                <img class="instagram-item" src="./images/item3.jpg">
+                <img class="instagram-item" src="./images/item4.jpg">
+                <img class="instagram-item" src="./images/item5.jpg">
+                <img class="instagram-item" src="./images/item6.jpg">
+                <img class="instagram-item" src="./images/item7.jpg">
+                <img class="instagram-item" src="./images/item8.jpg">
+                <img class="instagram-item" src="./images/item9.jpg">
+            </div>
+            <p>View more photos</p>
+        </div>
+    </div>
+    <hr style="width: 70%;">
+    <p class="copyright">© 2022 My-template</p>
+</footer>
+
+</html>
